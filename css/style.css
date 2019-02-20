@@ -1,0 +1,45 @@
+*{
+	font-family: 'Ubuntu';
+}
+.bloc-count{
+	width: 450px;
+	margin: 0 auto;
+}
+.count {
+    display: block;
+    width: 50%;
+    float: left;
+    margin-top: 80px;
+}
+div#circle1, div#circle2 {
+    width: 135px;
+    display: block;
+    margin: 0 auto;
+}
+span#count1, span#count2 {
+    position: absolute;
+    color: #007bff;
+    width: 133px;
+    text-align: center;
+    margin-top: -83px;
+    font-size: 18px;
+    font-weight: 600;
+}
+#circle1>label, #circle2>label {
+    position: absolute;
+    color: #007bff;
+    width: 133px;
+    text-align: center;
+    margin-top: -58px;
+    font-size: 12px;
+    font-weight: 100;
+}
+.count>p {
+    color: #007bff;
+    text-align: center;
+    font-size: 14px;
+}
+.bloc-count {
+    width: 450px;
+    margin: 0 auto;
+}

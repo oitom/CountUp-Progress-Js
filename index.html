@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Count UP</title>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="green eletron"/>
+	<meta name="description" content="Green eletron"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<div class="bloc-count">
+		<div class="count">
+	        <div id="circle1" data-value="0.85" data-thickness="10">
+	            <span id="count1">12167</span>
+	            <label>Title</label>
+	        </div>
+	        <p>Description</p>
+	    </div>
+
+	    <div class="count">
+	        <div id="circle2" data-value="0.75" data-thickness="10">
+	            <span id="count2">7614</span>
+	            <label>Title</label>
+	        </div>
+	        <p>Description</p>
+	    </div>
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/circle-progress.min.js"></script>
+    <script>
+		  var count1 =  parseInt($("#count1").text())
+        $('#circle1').circleProgress({
+            fill: "#007bff",
+            startAngle: -Math.PI / 2,
+            size: 133
+        }).on('circle-animation-progress', function(event, progress) {
+            $("#count1").html(parseInt(progress*count1));
+        });
+
+        var count2 =  parseInt($("#count2").text())
+        $('#circle2').circleProgress({
+            fill: "#007bff",
+            startAngle: -Math.PI / 2,
+            size: 133
+        }).on('circle-animation-progress', function(event, progress) {
+            $("#count2").html(parseInt(progress*count2));
+        });    	
+    </script>
+</body>
+</html>
